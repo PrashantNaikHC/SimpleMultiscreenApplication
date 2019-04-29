@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayingNow">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textAlignment="center"
+            android:text="Billie Jean"
+            android:id="@+id/song_name_tv"
+            android:textSize="30sp"
+            android:layout_margin="@dimen/default_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textAlignment="center"
+            android:text="michael jackson"
+            android:id="@+id/artist_name_tv"
+            android:textSize="30sp"
+            android:layout_margin="@dimen/default_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textAlignment="center"
+            android:text="pop"
+            android:id="@+id/genre_name_tv"
+            android:textSize="30sp"
+            android:layout_margin="@dimen/default_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_margin="@dimen/default_margin"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:background="@android:drawable/ic_media_previous"
+            android:id="@+id/previous_btn"
+            style="@style/media_button_style" />
+        <Button
+            android:background="@android:drawable/ic_media_pause"
+            android:id="@+id/pause_btn"
+            style="@style/media_button_style" />
+        <Button
+            android:background="@android:drawable/ic_media_next"
+            android:id="@+id/next_btn"
+            style="@style/media_button_style" />
+    </LinearLayout>
+
+</RelativeLayout>

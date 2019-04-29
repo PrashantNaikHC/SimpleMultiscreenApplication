@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Simple Multiscreen Application</string>
+    <string name="song_list">Playlist</string>
+    <string name="playing_now">Playing Now</string>
+</resources>
