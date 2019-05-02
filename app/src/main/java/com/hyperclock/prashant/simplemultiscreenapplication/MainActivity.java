@@ -25,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
         listView = findViewById(R.id.songs_lv);
 
-        songsArrayList.add(new Song("Beat It", "michael jackson", "Pop", R.drawable.song_one));
-        songsArrayList.add(new Song("Rap God", "eminem", "Rap", R.drawable.song_two));
-        songsArrayList.add(new Song("Boulevard of broken dreams", "green day", "Rock", R.drawable.song_three));
+        songsArrayList.add(new Song("Beat It", "michael jackson", "Pop", R.drawable.song_one, getResources().getString(R.string.beat_it_lyrics)));
+        songsArrayList.add(new Song("Rap God", "eminem", "Rap", R.drawable.song_two, getResources().getString(R.string.rap_god_lyrics)));
+        songsArrayList.add(new Song("Boulevard of broken dreams", "green day", "Rock", R.drawable.song_three, getResources().getString(R.string.boulevard_of_broken_dreams_lyrics)));
 
         SongAdapter adapter = new SongAdapter(getApplicationContext(), songsArrayList);
         listView.setAdapter(adapter);

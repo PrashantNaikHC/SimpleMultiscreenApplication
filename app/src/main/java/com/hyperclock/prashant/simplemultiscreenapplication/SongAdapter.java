@@ -53,6 +53,7 @@ public class SongAdapter extends ArrayAdapter<Song> {
         final String name = currentSong.getmName();
         final String artist = currentSong.getmArtist();
         final String genrename = currentSong.getmGenre();
+        final String lyrics = currentSong.getmLyrics();
         final int imageId = currentSong.getmImageId();
         play.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,11 +70,10 @@ public class SongAdapter extends ArrayAdapter<Song> {
         info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), PlayingNow.class);
+                Intent intent = new Intent(getContext(), InfoActivity.class);
                 intent.putExtra("song_name", name);
                 intent.putExtra("song_artist", artist);
-                intent.putExtra("song_genre", genrename);
-                intent.putExtra("song_image", imageId);
+                intent.putExtra("song_lyrics", lyrics);
                 getContext().startActivity(intent);
             }
         });

@@ -4,13 +4,23 @@ public class Song {
     private String mName;
     private String mArtist;
     private String mGenre;
+    private String mLyrics;
     private int mImageId;
 
-    public Song(String mName, String mArtist, String mGenre, int mImageId) {
+    public Song(String mName, String mArtist, String mGenre, int mImageId, String mLyrics) {
         this.mName = mName;
         this.mArtist = mArtist;
         this.mGenre = mGenre;
         this.mImageId = mImageId;
+        this.mLyrics = mLyrics;
+    }
+
+    public String getmLyrics() {
+        return mLyrics;
+    }
+
+    public void setmLyrics(String mLyrics) {
+        this.mLyrics = mLyrics;
     }
 
     public int getmImageId() {

@@ -20,10 +20,32 @@
                 android:id="@+id/song_background_iv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="center" />
+                android:scaleType="centerCrop" />
 
         </android.support.v7.widget.CardView>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/default_margin"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/previous_btn"
+                style="@style/media_button_style"
+                android:background="@android:drawable/ic_media_previous" />
+
+            <Button
+                android:id="@+id/pause_btn"
+                style="@style/media_button_style"
+                android:background="@android:drawable/ic_media_pause" />
+
+            <Button
+                android:id="@+id/next_btn"
+                style="@style/media_button_style"
+                android:background="@android:drawable/ic_media_next" />
+        </LinearLayout>
 
         <TextView
             android:fontFamily="serif"
@@ -55,28 +77,5 @@
 
     </LinearLayout>
 
-
-
-    <LinearLayout
-        android:layout_margin="@dimen/default_margin"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:weightSum="3"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:background="@android:drawable/ic_media_previous"
-            android:id="@+id/previous_btn"
-            style="@style/media_button_style" />
-        <Button
-            android:background="@android:drawable/ic_media_pause"
-            android:id="@+id/pause_btn"
-            style="@style/media_button_style" />
-        <Button
-            android:background="@android:drawable/ic_media_next"
-            android:id="@+id/next_btn"
-            style="@style/media_button_style" />
-    </LinearLayout>
 
 </RelativeLayout>
