@@ -14,14 +14,15 @@
             android:label="@string/song_list">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".PlayingNow"
             android:label="@string/playing_now" />
-        <activity android:name=".InfoActivity"></activity>
+        <activity
+            android:name=".InfoActivity"
+            android:label="@string/infoActivity" />
     </application>
 
 </manifest>

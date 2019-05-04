@@ -27,6 +27,8 @@ public class PlayingNow extends AppCompatActivity {
     @BindView(R.id.song_name_tv)
     TextView songName;
 
+    @BindView(R.id.song_background_iv)
+    ImageView songBackgroundImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,24 +46,23 @@ public class PlayingNow extends AppCompatActivity {
         songArtist.setText(mSongArtist);
         songGenre.setText(mSongGenre);
         songBackgroundImage.setImageResource(mSongImage);
-
         //bind the view using butterknife
         ButterKnife.bind(this);
     }
 
     @OnClick(R.id.next_btn)
     public void next() {
-
+        Toast.makeText(this, "Next song", Toast.LENGTH_SHORT).show();
     }
 
     @OnClick(R.id.previous_btn)
     public void previous() {
-
+        Toast.makeText(this, "Previous song", Toast.LENGTH_SHORT).show();
     }
 
     @OnClick(R.id.pause_btn)
     public void pause() {
-
+        Toast.makeText(this, "song paused", Toast.LENGTH_SHORT).show();
     }
 
     public void getIncomingIntent() {

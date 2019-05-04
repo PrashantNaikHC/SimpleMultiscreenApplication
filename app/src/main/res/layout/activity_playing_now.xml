@@ -1,81 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     tools:context=".PlayingNow">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:id="@+id/song_background_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="image"
+            android:scaleType="centerCrop" />
+
+    </android.support.v7.widget.CardView>
 
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/default_margin"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
 
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_margin="8dp">
+        <Button
+            android:id="@+id/previous_btn"
+            style="@style/media_button_style"
+            android:background="@android:drawable/ic_media_previous" />
 
-            <ImageView
-                android:id="@+id/song_background_iv"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop" />
+        <Button
+            android:id="@+id/pause_btn"
+            style="@style/media_button_style"
+            android:background="@android:drawable/ic_media_pause" />
 
-        </android.support.v7.widget.CardView>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_margin="@dimen/default_margin"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/previous_btn"
-                style="@style/media_button_style"
-                android:background="@android:drawable/ic_media_previous" />
-
-            <Button
-                android:id="@+id/pause_btn"
-                style="@style/media_button_style"
-                android:background="@android:drawable/ic_media_pause" />
-
-            <Button
-                android:id="@+id/next_btn"
-                style="@style/media_button_style"
-                android:background="@android:drawable/ic_media_next" />
-        </LinearLayout>
-
-        <TextView
-            android:fontFamily="serif"
-            android:textStyle="bold"
-            android:text="Billie Jean"
-            android:id="@+id/song_name_tv"
-            android:textSize="30sp"
-            android:layout_margin="@dimen/default_margin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:layout_marginLeft="16dp"
-            android:text="michael jackson"
-            android:id="@+id/artist_name_tv"
-            android:fontFamily="casual"
-            android:textSize="15sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:layout_marginLeft="16dp"
-            android:text="pop"
-            android:fontFamily="casual"
-            android:id="@+id/genre_name_tv"
-            android:textSize="15sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/next_btn"
+            style="@style/media_button_style"
+            android:background="@android:drawable/ic_media_next" />
 
     </LinearLayout>
 
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/song_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:fontFamily="serif"
+        android:text="Billie Jean"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/artist_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="casual"
+        android:text="michael jackson"
+        android:textAlignment="center"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/genre_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="casual"
+        android:text="pop"
+        android:textAlignment="center"
+        android:textSize="15sp" />
+
+</LinearLayout>
